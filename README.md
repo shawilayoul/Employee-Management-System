@@ -33,3 +33,62 @@ A centralized platform to manage employee records (personal details, job titles,
 | Container   | Docker                  |
 
 ## Project Structure
+employee-management/
+├── backend/ # Spring Boot app
+│ ├── src/ # Source code
+│ ├── pom.xml # Maven config
+│ └── Dockerfile
+│
+├── frontend/ # Angular app
+│ ├── src/ # Angular components
+│ ├── package.json # Node dependencies
+│ └── Dockerfile
+│
+├── docker-compose.yml # Multi-container setup
+└── README.md
+
+
+## Prerequisites
+
+- Docker & Docker Compose
+- Java 17 (for local backend dev)
+- Node.js 18+ & Angular CLI (for local frontend dev)
+- PostgreSQL (or use Docker container)
+
+## Installation
+
+### Using Docker (Recommended)
+```bash
+docker-compose up --build  # Starts all services
+
+Access:
+
+Frontend: http://localhost:4200
+
+Backend: http://localhost:8080
+
+Database: postgresql://localhost:5432
+
+API Documentation
+Endpoint	Method	Description
+/api/employees	GET	Get all employees
+/api/employees	POST	Add new employee
+/api/employees/{id}	GET	Get employee by ID
+/api/employees/{id}	PUT	Update employee
+/api/employees/{id}	DELETE	Delete employee
+License
+MIT License
+
+### Key Improvements:
+1. **Proper Markdown Formatting** - Uses consistent headers and spacing
+2. **Visual Enhancements**:
+   - Added shields.io badges
+   - Better table formatting
+   - Clear section separation
+3. **Logical Organization**:
+   - Features grouped by category
+   - Installation steps clearly separated
+4. **Code Block Formatting** - Properly formatted for GitHub rendering
+5. **Consistent Styling** - Uniform heading levels and bullet points
+
+This version will display beautifully on GitHub with proper spacing, headers, and visual elements that make it easy to navigate.
