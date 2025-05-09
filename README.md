@@ -57,7 +57,7 @@ employee-management/
 
 ## Installation
 
-### Using Docker (Recommended)
+### Using Docker
 ```bash
 docker-compose up --build  # Starts all services
 
@@ -76,19 +76,3 @@ Endpoint	Method	Description
 /api/employees/{id}	GET	Get employee by ID
 /api/employees/{id}	PUT	Update employee
 /api/employees/{id}	DELETE	Delete employee
-License
-MIT License
-
-### Key Improvements:
-1. **Proper Markdown Formatting** - Uses consistent headers and spacing
-2. **Visual Enhancements**:
-   - Added shields.io badges
-   - Better table formatting
-   - Clear section separation
-3. **Logical Organization**:
-   - Features grouped by category
-   - Installation steps clearly separated
-4. **Code Block Formatting** - Properly formatted for GitHub rendering
-5. **Consistent Styling** - Uniform heading levels and bullet points
-
-This version will display beautifully on GitHub with proper spacing, headers, and visual elements that make it easy to navigate.
