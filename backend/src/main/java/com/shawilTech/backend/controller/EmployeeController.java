@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("api/employee")
-@CrossOrigin("*")
 public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
-    @GetMapping("/all")
+    @GetMapping
     public List<Employee> getAllEmployees(){
         return employeeService.getAllEmployee();
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public  Employee addEmployee(@RequestBody Employee e){
         return  employeeService.addEmployee(e);
     }

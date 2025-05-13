@@ -1,1 +1,39 @@
-<p>employee-form works!</p>
+<form class="employee-form" [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+    <h2>Add Employee</h2>
+
+    <input formControlName="name" placeholder="Name"/>
+
+    <div *ngIf="employeeForm.get('name')?.invalid ">
+        <small class="error">Name is required</small>
+    </div>
+
+    <input formArrayName="email" placeholder="Email">
+    <div *ngIf="employeeForm.get('email')?.invalid">
+        <small class="error">Email is required</small>
+    </div>
+
+    <input formControlName="phone" placeholder="Phone number" />
+    <div *ngIf="employeeForm.get('phone')?.invalid">
+        <small class="error">Phone is required</small>
+    </div>
+    <input formControlName="jobTitle" placeholder="jobTitle"/>
+    <div *ngIf="employeeForm.get('jobTitle')?.invalid ">
+        <small class="error">jobTitle is required</small>
+    </div>
+
+    <input formControlName="imageUrl" placeholder="imageUrl"/>
+
+    <button type="submit">Add</button>
+
+</form>
+
+<div class="employee-list">
+    <h2>Employee List</h2>
+    <ul>
+      <li *ngFor="let em of employees">
+        {{ em.name }} - {{ em.jobTitle }} - {{ em.email }}
+        <button (click)="deleteEmployee(em.id!)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
